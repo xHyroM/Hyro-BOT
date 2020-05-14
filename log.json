@@ -1,0 +1,33 @@
+[
+   {
+      "log_type": "success",
+      "log_message": "Page is currently started!",
+      "log_date": 1587831438000,
+      "log_action": ""
+   },
+   {
+      "log_type": "info",
+      "log_message": "Opravený CMD +mcsrv | +mcserver",
+      "log_date": 1587894945993
+   },
+   {
+      "log_type": "info",
+      "log_message": "Upravený príkaz +hack [USER/BOT] (Bot má iný hack)!",
+      "log_date": 1587995441941
+   },
+   {
+      "log_type": "info",
+      "log_message": "Veľký update Hyro BOTA! 4.0",
+      "log_date": 1589203088000
+   },
+   {
+      "log_type": "info",
+      "log_message": "Prerábam do v12",
+      "log_date": 1589373971934
+   },
+   {
+      "log_type": "success",
+      "log_message": "Hyro BOT beží na v12",
+      "log_date": 1589381684948
+   }
+]
