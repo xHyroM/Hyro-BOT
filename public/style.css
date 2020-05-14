@@ -1,0 +1,51 @@
+/* styles */
+/* called by your view template */
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+.name {
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.italics {
+  font-style: italic;
+  font-size: var(--medium);
+}
+
+.green {
+  color: green;
+  font-size: var(--medium);
+}
+
+.red {
+  color: red;
+  font-size: var(--medium);
+}
+
+.canvas {
+  height: 100px;
+  witdh: 1px;
+  text-align: right;
+}
+
+canvas, .canvas {
+  display: inline-block;
+}
+
+.bold-h3 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.started {
+  float: right;
+}
+
+textarea {
+  display: none;
+}
