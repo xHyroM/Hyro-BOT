@@ -20,7 +20,7 @@ module.exports = {
 
 	.setColor("RANDOM")
 	.setTitle("**:black_circle:  MAGIC BALL  :black_circle:**")
-    .setDescription("Question: `" + args.join("") + "`\nAnswer: `" + doMagic8BallVoodoo() + "`")
+    .setDescription("Question: `" + args.join(" ") + "`\nAnswer: `" + doMagic8BallVoodoo() + "`")
 	.setFooter(message.author.username, message.author.avatarURL())
 	.setTimestamp();
     

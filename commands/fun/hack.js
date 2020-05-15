@@ -16,17 +16,22 @@ module.exports = {
   // RANDOM EMAIL
   var tokenrandom = 'aNbcdefghijklmnopqrstuvwxyz1234567890';
     var token = '';
-    for(var ii=0; ii<30; ii++){
+    for(var ii=0; ii<59; ii++){
     token += tokenrandom[Math.floor(Math.random() * tokenrandom.length)];}     
   
-  
+  var cs = 'aNbcdefghijklmnopqrstuvwxyz1234567890';
+    var clientsecret = '';
+    for(var ii=0; ii<32; ii++){
+    clientsecret += cs[Math.floor(Math.random() * cs.length)];}     
+      
     const embede = new Discord.MessageEmbed()
     
     .setColor("#f58142")
     .setTitle(":computer: | Hack")
     .setDescription("Your Result:")
     .addField("<:bustsinsilhouette:640513802470817793> | **Name**", taggedUser.username)
-    .addField(":page_with_curl: | **BOT ID**", taggedUser.id)
+    .addField(":page_with_curl: | **CLIENT ID**", taggedUser.id)
+    .addField(":page_with_curl: | **CLIENT SECRET**", clientsecret)
     .addField(":lock: | **Discord Token**", "N" + token)
     .setThumbnail(taggedUser.displayAvatarURL)
     .setFooter(message.author.username, message.author.avatarURL)

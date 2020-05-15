@@ -171,7 +171,7 @@ bot.on("guildMemberAdd", async (member) => {
 })
 
 
-bot.on("guildCreate", guild => {
+/*bot.on("guildCreate", guild => {
     let channelID;
     let channels = guild.channels;
     channelLoop:
@@ -190,7 +190,7 @@ bot.on("guildCreate", guild => {
     .setDescription("Thank you for adding a bot to your server\nMy prefix is: `+` (can change)")
     .setTimestamp();
     channel.send(embed).catch(err => console.log(`❌ Error: ${err}`))
-});
+});*/
 
 bot.on("message", async message => {
  let commandsExecuted = parseInt(fs.readFileSync("json/bot/execute.txt").toString(), 10)
@@ -565,7 +565,7 @@ const args = message.content.split(' ');
                         console.error(err);
                         return message.channel.send(':x: No or invalid value entered, cancelling video selection.');
                     }
-                    const videoIndex = parseInt(response.first().content);
+                    const videoIndex = parseInt(response.first().content); //response.firdt().content
                     var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
                 } catch (err) {
                     console.error(err);
@@ -1450,10 +1450,33 @@ bot.on('ready', () => {
 // STATUS NEW
 
 const users = bot.users.cache.array();
+const delay = require("delay")
 
 
+bot.on("ready", async () => {
+    try {
+    for (var i = 0; i != -1; i++)
+    {
+   bot.user.setStatus("idle");
+   bot.user.setActivity(`${client.commands.size} commands | +help`, {type: "STREAMING", url: "https://www.twitch.tv/hyroeudev"});
+    await delay(30000);
+    bot.user.setStatus("online");
+    bot.user.setActivity("DEV | 𝙃𝙮𝙧𝙤#8938", {type: "STREAMING", url: "https://www.twitch.tv/hyroeudev"});
+    await delay(30000);
+    bot.user.setStatus("idle");
+    bot.user.setActivity("+help | 𝙃𝙮𝙧𝙤#8938", {type: "WATCHING"});
+    await delay(30000);
+    bot.user.setStatus("dnd");
+    bot.user.setActivity(`Version | ${botVersion}`, {type: "LISTENING"});
+    await delay(30000);
+    //client.user.setStatus("dnd");
+    //client.user.setActivity(`${client.guilds.cache.size} guilds | !help`, {type: "WATCHING"});
+    //await delay(30000);
+}
+    } catch (e) { console.log(e) }
+});
 
-bot.on('ready', () => {
+/*bot.on('ready', () => {
   
   const activities_list = [
     "+help| 𝙃𝙮𝙧𝙤#8938", 
@@ -1474,7 +1497,7 @@ bot.on('ready', () => {
         }
     });
     }, 10000); 
-});
+});*/
 
 bot.on('disconnect', (event) =>{
 	console.log("Exited with code: " + event.code);
