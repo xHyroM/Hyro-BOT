@@ -6,6 +6,7 @@ dependencies:
   canvas: 2.6.1
   cheerio: 0.22.0
   common-tags: 1.8.0
+  delay: 4.3.0
   discord-backup: 2.1.17
   discord-money: 0.2.0
   discord.js: 12.2.0
@@ -1051,6 +1052,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
+  /delay/4.3.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-Lwaf3zVFDMBop1yDuFZ19F9WyGcZcGacsbdlZtWjQmM50tOcMntm1njF/Nb/Vjij3KaSvCF+sEYGKrrjObu2NA==
   /delayed-stream/1.0.0:
     dev: false
     engines:
@@ -4125,6 +4132,7 @@ specifiers:
   canvas: ^2.6.1
   cheerio: ^0.22.0
   common-tags: ^1.8.0
+  delay: ^4.3.0
   discord-backup: ^2.1.17
   discord-money: ^0.2.0
   discord.js: ^12.2.0
