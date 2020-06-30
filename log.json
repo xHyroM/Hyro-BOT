@@ -29,5 +29,10 @@
       "log_type": "success",
       "log_message": "Hyro BOT beží na v12",
       "log_date": 1589381684948
+   },
+   {
+      "log_type": "error",
+      "log_message": "Hyro BOT servery padajú a majú veľkú záťaž! (Server Shutdowned)",
+      "log_date": 1590653358979
    }
 ]

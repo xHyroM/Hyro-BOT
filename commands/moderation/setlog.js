@@ -3,7 +3,7 @@ const fs = require("fs")
 
 module.exports = {
     name: "setlog",
-    aliases: ["setlog", "setchannel"],
+    aliases: ["setlog", "setlogchannel"],
   category: "moderation",
     description: "Set log channel",
     usage: "",

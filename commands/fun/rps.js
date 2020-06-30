@@ -36,11 +36,11 @@ module.exports = {
             if ((me === "🗻" && clientChosen === "✂") ||
                 (me === "📰" && clientChosen === "🗻") ||
                 (me === "✂" && clientChosen === "📰")) {
-                    return "Vyhral si!";
+                    return "You won!";
             } else if (me === clientChosen) {
-                return "Remíza!";
+                return "Draw!";
             } else {
-                return "Prehral si!";
+                return "You lost!";
             }
         }
     }

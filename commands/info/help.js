@@ -39,7 +39,7 @@ else prefix = fetched;
   
     const embed = new MessageEmbed()
         .setColor("RANDOM")
-
+  .setFooter("Get invite link execute command +invite")
     const commands = (category) => {
         return client.commands
             .filter(cmd => cmd.category === category)
@@ -73,5 +73,4 @@ function getCMD(client, message, input) {
         embed.setFooter(`Syntax: <> = required, [] = optional`);
     }
 
-    return message.channel.send(embed.setColor("RANDOM").setDescription(info)).catch(err => message.reply(`❌ Error: ${err}`)); 
-}
+    return message.channel.send(embed.setColor("RANDOM").setDescription(info).setFooter("Get invite link execute command +invite"))}

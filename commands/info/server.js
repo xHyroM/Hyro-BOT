@@ -63,7 +63,7 @@ module.exports = {
 	.addField("<:hat:640575569742004256> Emoji Count", message.guild.emojis.cache.size,)
 	.addField("<:spoolofthread:640575569561518080> Roles", message.guild.roles.cache.size,)
 	.addField("<:briefcase_1f4bc:640575567304982560> Channels", message.guild.channels.cache.size,)
-	.addField("<:checked:634724283511472149> Verify Server", verify,)  
+	.addField("<:checked:634724283511472149> Verified Server", verify,)  
 		.setThumbnail(message.guild.iconURL())
               .setFooter(message.author.username, message.author.avatarURL())
             .setTimestamp();

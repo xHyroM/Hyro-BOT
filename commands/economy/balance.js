@@ -1,22 +1,20 @@
-const Discord = require("discord.js")
-const money = require('discord-money');
-const moment = require('moment');
-const src = require('src');
+const Discord = require("discord.js");
 
 module.exports = {
-    name: "money",
-    aliases: ["bal", "balance", "money"],
-    category: "economy",  
-    description: "Ukáže koľko máš penazí",
-    run: (client, message, args) => {
-            money.fetchBal(message.author.id).then((i) => { // money.fetchBal grabs the userID, finds it, and puts it into 'i'.
-				            message.channel.send({embed: {
-                            color: 15844367,
-                            description: `**Money:** ${i.money}`,
-                            author: {
-                                name: `MONEY | BALANCE`,
-                                icon_url: message.author.avatarURL()
-                            }
-                        }}).catch(err => message.reply(`❌ Error: ${err}`)); 
-            })
-    }}
+  name: "balance",
+  aliases: ["bal", "balance", "money"],
+  category: "economy",
+  run: async (client, message, args) => {
+    const eco = require("discord-economy");
+    var output = await eco.FetchBalance(message.author.id);
+
+    const embed = new Discord.MessageEmbed()
+      .setTitle(":moneybag: Money | Cash :moneybag:")
+      .setColor("RANDOM")
+      .setDescription("You have **" + output.balance + "** money")
+      .setFooter(message.author.username, message.author.avatarURL())
+      .setTimestamp();
+
+    message.channel.send(embed).catch(err => message.reply(`❌ Error: ${err}`));
+  }
+};

@@ -1,4 +1,4 @@
-const Discord = require("discord.js")
+/*const Discord = require("discord.js")
 const money = require('discord-money');
 const moment = require('moment');
 const src = require('src');
@@ -60,4 +60,4 @@ function isCommand(message, command){
   	}
          
        })
-    }}
+    }}*/

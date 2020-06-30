@@ -1,10 +1,5 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "4.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "version": "4.0.0",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -14,6 +9,7 @@
     "approximate-number": "^2.0.0",
     "ascii-table": "^0.0.9",
     "async": "^3.2.0",
+    "better-sqlite3": "^7.1.0",
     "browserify-middleware": "^8.1.1",
     "canvas": "^2.6.1",
     "cheerio": "^0.22.0",
@@ -49,11 +45,10 @@
     "src": "^1.1.2",
     "superagent": "^5.2.2",
     "weather-js": "^2.0.0",
-    "youtube-search": "^1.1.4",
-    "quick.db": "^7.1.1"
+    "youtube-search": "^1.1.4"
   },
   "engines": {
-    "node": "11.x"
+    "node": "12.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
